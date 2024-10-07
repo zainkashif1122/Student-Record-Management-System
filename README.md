@@ -1,7 +1,3 @@
-Based on the code you provided, here's an updated README for your project:
-
----
-
 # Student-Record-Management-System
 
 Take a look at my **console-based Student Record Management System**, developed in C++! 📚 This project allows users to easily manage and manipulate student records including roll numbers, marks, percentages, and grades.
@@ -83,7 +79,3 @@ To run the Student Record Management System, follow these steps:
 This project provides a simple yet effective way to manage student data using basic console operations in C++. Future enhancements could expand its capability and usability for broader applications.
 
 Enjoy using this system to manage student records efficiently! 😊
-
---- 
-
-Feel free to adjust any sections to match your preferences!
