@@ -3,8 +3,23 @@ using namespace std;
 
 const int MAX_STUDENTS = 5;
 
+void showIntroBanner() 
+{
+    cout << "***********************************************" << endl;
+    cout << "*                                             *" << endl;
+    cout << "*       STUDENT RECORD MANAGEMENT SYSTEM      *" << endl;
+    cout << "*                                             *" << endl;
+    cout << "*       Manage, Add, Update, and Display      *" << endl;
+    cout << "*             Student Records Easily          *" << endl;
+    cout << "*                                             *" << endl;
+    cout << "***********************************************" << endl;
+    cout << endl;
+}
+
 int main()
 {
+    showIntroBanner();
+
     int rollNumbers[MAX_STUDENTS];
     int marksCS[MAX_STUDENTS];
     int marksMath[MAX_STUDENTS];
@@ -17,7 +32,7 @@ int main()
     {
         if (count >= MAX_STUDENTS)
         {
-            cout << "Cannot enroll more students, limit reached.\n";
+            cout << endl << "Cannot enroll more students, limit reached.\n";
             break;
         }
 
@@ -63,31 +78,32 @@ int main()
 
         count++;
 
-        cout << "Do you want to enroll another student? (Y/y for yes): ";
+        cout << endl << "Do you want to enroll another student? (Y/y for yes): ";
         cin >> choice;
+        cout << endl;
     } while ((choice == 'Y' || choice == 'y') && count < MAX_STUDENTS);
 
     do
     {
-        cout << "Do you want to perform advanced operations? (Y/y for yes, N/n to exit): ";
+        cout << endl << "Do you want to perform advanced operations? (Y/y for yes, N/n to exit): ";
         cin >> choice;
         if (choice == 'Y' || choice == 'y')
         {
             int operation;
-            cout << "Choose an operation:\n";
-            cout << "1. Update Roll Number of a particular student\n";
-            cout << "2. Update marks of a particular student for CS\n";
-            cout << "3. Update marks of CS for all students\n";
-            cout << "4. Update marks for Mathematics\n";
-            cout << "5. Update marks of Mathematics for all students\n";
-            cout << "6. Sort the data on the basis of generated percentages\n";
-            cout << "7. Delete the record of a particular student\n";
+            cout << endl << "Choose an operation:" << endl;
+            cout << "1. Update Roll Number of a particular student" << endl;
+            cout << "2. Update marks of a particular student for Computer Science" << endl;
+            cout << "3. Update marks of Computer Science for all students" << endl;
+            cout << "4. Update marks of a particular student for Mathematics" << endl;
+            cout << "5. Update marks of Mathematics for all students" << endl;
+            cout << "6. Sort the data on the basis of generated percentages" << endl;
+            cout << "7. Delete the record of a particular student" << endl;
             cin >> operation;
 
             if (operation == 1)
             {
                 int rollNumber;
-                cout << "Enter Roll Number of the student to update: ";
+                cout << endl << "Enter Roll Number of the student to update: ";
                 cin >> rollNumber;
                 int index = -1;
                 for (int i = 0; i < count; ++i)
@@ -100,7 +116,7 @@ int main()
                 }
                 if (index == -1)
                 {
-                    cout << "Student not found." << endl;
+                    cout << endl << "Student not found." << endl;
                 }
                 else
                 {
@@ -111,7 +127,7 @@ int main()
             else if (operation == 2)
             {
                 int rollNumber, marksCSInput;
-                cout << "Enter Roll Number of the student to update: ";
+                cout << endl << "Enter Roll Number of the student to update: ";
                 cin >> rollNumber;
                 int index = -1;
                 for (int i = 0; i < count; ++i)
@@ -124,7 +140,7 @@ int main()
                 }
                 if (index == -1)
                 {
-                    cout << "Student not found." << endl;
+                    cout << endl << "Student not found." << endl;
                 }
                 else
                 {
@@ -163,7 +179,7 @@ int main()
                 int marksCSInput;
                 do
                 {
-                    cout << "Enter new Marks for Computer Science for all students (0-100): ";
+                    cout << endl << "Enter new Marks for Computer Science for all students (0-100): ";
                     cin >> marksCSInput;
                 } while (marksCSInput > 100 || marksCSInput < 0);
                 for (int i = 0; i < count; ++i)
@@ -196,7 +212,7 @@ int main()
             else if (operation == 4)
             {
                 int rollNumber, marksMathInput;
-                cout << "Enter Roll Number of the student to update: ";
+                cout << endl << "Enter Roll Number of the student to update: ";
                 cin >> rollNumber;
                 int index = -1;
                 for (int i = 0; i < count; ++i)
@@ -209,7 +225,7 @@ int main()
                 }
                 if (index == -1)
                 {
-                    cout << "Student not found." << endl;
+                    cout << endl << "Student not found." << endl;
                 }
                 else
                 {
@@ -248,7 +264,7 @@ int main()
                 int marksMathInput;
                 do
                 {
-                    cout << "Enter new Marks for Mathematics for all students (0-100): ";
+                    cout << endl << "Enter new Marks for Mathematics for all students (0-100): ";
                     cin >> marksMathInput;
                 } while (marksMathInput > 100 || marksMathInput < 0);
                 for (int i = 0; i < count; ++i)
@@ -308,12 +324,12 @@ int main()
                         }
                     }
                 }
-                cout << "Data sorted based on percentages.\n";
+                cout << endl << "Data sorted based on percentages." << endl;
             }
             else if (operation == 7)
             {
                 int rollNumber;
-                cout << "Enter Roll Number of the student to delete: ";
+                cout << endl << "Enter Roll Number of the student to delete: ";
                 cin >> rollNumber;
                 int index = -1;
                 for (int i = 0; i < count; ++i)
@@ -326,7 +342,7 @@ int main()
                 }
                 if (index == -1)
                 {
-                    cout << "Student not found." << endl;
+                    cout << endl << "Student not found." << endl;
                 }
                 else
                 {
@@ -339,13 +355,13 @@ int main()
                         grades[i] = grades[i + 1];
                     }
                     count--;
-                    cout << "Record deleted successfully.\n";
+                    cout << endl << "Record deleted successfully." << endl;
                 }
             }
         }
     } while (choice != 'N' && choice != 'n');
 
-    cout << "Student Records:\n";
+    cout << endl << "Student Records:" << endl;
     for (int i = 0; i < count; ++i)
     {
         cout << "Roll Number: " << rollNumbers[i]
