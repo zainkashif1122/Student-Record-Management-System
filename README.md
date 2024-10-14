@@ -9,6 +9,7 @@ Take a look at my **console-based Student Record Management System**, developed 
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Installation](#installation)
+- [Live Preview](#live-preview)
 - [Usage Instructions](#usage-instructions)
 - [File Structure](#file-structure)
 - [Technologies Used](#technologies-used)
@@ -44,6 +45,14 @@ To run the Student Record Management System, follow these steps:
    ```bash
    ./Student-Record-Management-System
    ```
+
+## Live Preview
+
+Get a glimpse of how the program works with the following screen recording:
+
+[Screen Recording](screenRecording.MP4)
+
+> **Note:** The quality of these screen recordings has been reduced to comply with GitHub's 25MB file size limit.
 
 ## Usage Instructions
 1. **Start the Program**: Upon launching, you can enter student roll numbers and marks for both Computer Science and Mathematics. The system calculates the percentage and assigns a grade.
