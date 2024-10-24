@@ -50,7 +50,7 @@ To run the Student Record Management System, follow these steps:
 
 Get a glimpse of how the program works with the following screen recording:
 
-[Screen Recording](screenRecording.MP4)
+[`Screen Recording`](screenRecording.MP4)
 
 > **Note:** The quality of these screen recordings has been reduced to comply with GitHub's 25MB file size limit.
 
